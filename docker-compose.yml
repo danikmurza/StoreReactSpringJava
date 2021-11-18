@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  myapp-mysql:
+    image: danikmurza/mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - 3306:3306
+    expose:
+          - 3333
+
+
+
+  myapp-main:
+    image: m:latest
+    restart: on-failure
+    depends_on:
+      - myapp-mysql
+    ports:
+      - 8080:8080
+    expose:
+      - 80
+networks:
+  default:
+    name: my
