@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
+//@ToString
 public class Products  {
 
     @Id
@@ -43,5 +43,6 @@ public class Products  {
 
     @OneToMany(targetEntity = Review.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "product_id", referencedColumnName = "_id")
+    @ToString.Exclude
     private List<Review> review = new ArrayList<>();
 }

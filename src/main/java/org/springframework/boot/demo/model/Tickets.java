@@ -11,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
+//@ToString
 public class Tickets {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

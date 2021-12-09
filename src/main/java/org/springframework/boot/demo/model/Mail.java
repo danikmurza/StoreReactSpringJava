@@ -11,7 +11,7 @@ import java.util.List;
 //@NoArgsConstructor
 @Getter
 @Setter
-@ToString
+//@ToString
 public class Mail {
 
     private String mailFrom;

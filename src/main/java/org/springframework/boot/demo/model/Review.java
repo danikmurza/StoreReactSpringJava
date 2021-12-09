@@ -27,11 +27,8 @@ public class Review{
     @Column(name = "email")
     private String email;
 
-    @Column(name = "user_id")
-    private String userId;
-
     @Column(name = "product_id")
-    private String productId;
+    private Number productId;
 
     @Column(name = "rating")
     private String rating;

@@ -15,7 +15,6 @@ import java.util.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -67,21 +66,17 @@ public class Users {
 //    @JoinColumn(name = "user_id", referencedColumnName = "_id")
 //    private List<Role> roles = new ArrayList<>();
 
-//    @OneToMany(targetEntity = Address.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_id", referencedColumnName = "_id")
-//    private List<Address> address = new ArrayList<>();
-//
-//    @OneToMany(targetEntity = Tickets.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_id", referencedColumnName = "_id")
-//    private List<Tickets> tickets = new ArrayList<>();
-//
-//    @OneToMany(targetEntity = Orders.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_id", referencedColumnName = "_id")
-//    private List<Orders> orders = new ArrayList<>();
+    @OneToMany(targetEntity = Address.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id", referencedColumnName = "_id")
+    private List<Address> address = new ArrayList<>();
 
-//    @OneToMany(targetEntity = Review.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_id", referencedColumnName = "_id")
-//    private List<Review> reviews = new ArrayList<>();
+    @OneToMany(targetEntity = Tickets.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id", referencedColumnName = "_id")
+    private List<Tickets> tickets = new ArrayList<>();
+
+    @OneToMany(targetEntity = Orders.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id", referencedColumnName = "_id")
+    private List<Orders> orders = new ArrayList<>();
 
 
 

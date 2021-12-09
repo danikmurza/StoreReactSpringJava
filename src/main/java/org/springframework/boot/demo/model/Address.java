@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
+//@ToString
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
