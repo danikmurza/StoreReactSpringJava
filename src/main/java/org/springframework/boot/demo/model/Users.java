@@ -66,15 +66,15 @@ public class Users {
 //    @JoinColumn(name = "user_id", referencedColumnName = "_id")
 //    private List<Role> roles = new ArrayList<>();
 
-    @OneToMany(targetEntity = Address.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = Address.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "_id")
     private List<Address> address = new ArrayList<>();
 
-    @OneToMany(targetEntity = Tickets.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = Tickets.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "_id")
     private List<Tickets> tickets = new ArrayList<>();
 
-    @OneToMany(targetEntity = Orders.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = Orders.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "_id")
     private List<Orders> orders = new ArrayList<>();
 

@@ -25,10 +25,10 @@ public class TicketController {
     public @ResponseBody
     Object addTicket(@RequestBody Tickets body, @PathVariable String id) {
 
-        int userId = Integer.parseInt(body.getUserId());
+//        int userId = Integer.parseInt(body.getUserId());
         try {
             ticketService.save(body);
-            return obj.tokens(userId);
+            return obj.tokens(body.getUserId());
 
         } catch (Exception e) {
             return obj.Error("error" + e, 403);

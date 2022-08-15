@@ -18,7 +18,7 @@ public class Tickets {
     private int _id;
 
     @Column(name = "user_id")
-    private String userId;
+    private int userId;
 
     @Column(name = "subject")
     private String subject;

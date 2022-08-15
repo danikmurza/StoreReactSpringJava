@@ -41,7 +41,7 @@ public class Orders {
     private String nameProduct;
 
     @Column(name = "user_id")
-    private String userId;
+    private int userId;
 
     @Column(name = "date_order")
     private Date dateOrder= new Date();

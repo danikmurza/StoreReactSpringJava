@@ -41,8 +41,9 @@ public class Products  {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(targetEntity = Review.class, cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = Review.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id", referencedColumnName = "_id")
     @ToString.Exclude
     private List<Review> review = new ArrayList<>();
+    
 }

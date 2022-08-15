@@ -28,7 +28,7 @@ public class Review{
     private String email;
 
     @Column(name = "product_id")
-    private Number productId;
+    private int productId;
 
     @Column(name = "rating")
     private String rating;

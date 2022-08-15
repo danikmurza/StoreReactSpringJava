@@ -20,7 +20,7 @@ public class Address {
     private String line1;
 
     @Column(name = "user_id")
-    private String userId;
+    private int userId;
 
     @Column(name = "line2")
     private String line2;

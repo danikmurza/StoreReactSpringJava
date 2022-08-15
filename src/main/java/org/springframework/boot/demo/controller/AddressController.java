@@ -31,9 +31,9 @@ public class AddressController {
     public Object addAddress(@RequestBody Address body){
         System.out.println("A D D R E S S   " + body);
         try {
-            int userId = Integer.parseInt(body.getUserId());
+//            int userId = Integer.parseInt(body.getUserId());
             addressService.save(body);
-            return obj.tokens(userId);
+            return obj.tokens(body.getUserId());
         }catch (Exception e){
             return obj.message("error" + e, 400);
         }
@@ -45,8 +45,8 @@ public class AddressController {
         try {
             int a = body.get_id();
             addressService.deleteById(a);
-            int userId = Integer.parseInt(body.getUserId());
-            return obj.tokens(userId);
+//            int userId = Integer.parseInt(body.getUserId());
+            return obj.tokens(body.getUserId());
         }catch (Exception e){
             return obj.message("error" + e, 400);
         }
